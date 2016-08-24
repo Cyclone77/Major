@@ -1,6 +1,22 @@
+<!-- Page Header -->
+<div class="home-template">
+    <header class="main-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                    <div class="site-heading">
+                        <!--<h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>-->
+                        <!--<hr class="small">-->
+                        <!--<span class="subheading">{{ page.description }}</span>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-    <div class="container-fluid">
+<nav class="main-navigation">
+    <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
             <button type="button" class="navbar-toggle">
@@ -18,11 +34,11 @@
             so, when navbar scale out, the <nav> will cover tags.
             also mask any touch event of tags, unfortunately.
         -->
-        <div id="huxblog_navbar">
+        <div class="row">
             <div class="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="{{ site.baseurl }}/">Home</a>
+                        <a href="{{ site.baseurl }}/">首页</a>
                     </li>
                     {% for page in site.pages %}{% if page.title %}
                     <li>
@@ -40,6 +56,8 @@
     // Drop Bootstarp low-performance Navbar
     // Use customize navbar with high-quality material design animation
     // in high-perf jank-free CSS3 implementation
+    /*
+     * 滚动条向上滚动出现菜单栏
     var $body   = document.body;
     var $toggle = document.querySelector('.navbar-toggle');
     var $navbar = document.querySelector('#huxblog_navbar');
@@ -63,4 +81,5 @@
             $navbar.className += " in";
         }
     }
+    */
 </script>

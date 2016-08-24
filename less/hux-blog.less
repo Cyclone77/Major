@@ -444,7 +444,6 @@ pre code{
 .post-preview {
 	> a {
 		color: @gray-dark;
-		&:hover,
 		&:focus {
 			text-decoration: none;
 			color: @brand-primary;
@@ -499,11 +498,8 @@ pre code{
 // Hux add home-page post-content-preview
 .post-content-preview{
     font-size: 13px;
-    font-style: italic;
+    line-height: 1.5;
     color:#a3a3a3;
-    &:hover{
-        color: @brand-primary;
-    }
     @media only screen and (min-width: 768px) {
         font-size:14px;
     }
@@ -530,7 +526,6 @@ pre code{
 
 footer {
 	font-size: 20px;
-	padding: 50px 0 65px;
 	.list-inline {
 		margin: 0;
 		padding: 0;

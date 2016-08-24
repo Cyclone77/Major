@@ -1,0 +1,96 @@
+<!--公告-->                
+<section class="newsItem">
+    <h3 class="catListTitle">公告</h3>
+        <div class="">
+            <b>提醒：本博客完美支持移动端</b>
+        </div>
+</section>
+
+<!-- Featured Tags -->
+{% if site.featured-tags %}
+<section class="newsItem">
+    <h3 class="catListTitle"><a href="{{'/tags/' | prepend: site.baseurl }}">我的标签</a></h3>
+    <div class="tags">
+        {% for tag in site.tags offset:1 limit:10 %}
+            <a href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+        {% endfor %}
+        <a href="/tags/">...</a>
+    </div>
+</section>
+{% endif %}
+
+<!-- Short About -->
+<section class="newsItem">
+    <h3 class="catListTitle"><a href="{{'/about/' | prepend: site.baseurl }}">关于我</a></h3>
+    <div class="short-about">
+        {% if site.sidebar-avatar %}
+            <img src="{{site.sidebar-avatar}}" />
+        {% endif %}
+        {% if site.sidebar-about-description %}
+            <p>{{site.sidebar-about-description}}</p>
+        {% endif %}
+        <!-- SNS Link -->
+        <ul class="list-inline">
+            {% if site.RSS %}
+            <li>
+                <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+            {% endif %}
+            {% if site.twitter_username %}
+            <li>
+                <a href="https://twitter.com/{{ site.twitter_username }}">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+            {% endif %}
+            {% if site.zhihu_username %}
+            <li>
+                <a target="_blank" href="https://www.zhihu.com/people/{{ site.zhihu_username }}">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa  fa-stack-1x fa-inverse">知</i>
+                    </span>
+                </a>
+            </li>
+            {% endif %}
+            {% if site.weibo_username %}
+            <li>
+                <a target="_blank" href="http://weibo.com/{{ site.weibo_username }}">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+            {% endif %}
+            {% if site.facebook_username %}
+            <li>
+                <a target="_blank" href="https://www.facebook.com/{{ site.facebook_username }}">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+            {% endif %}
+            {% if site.github_username %}
+            <li>
+                <a target="_blank" href="https://github.com/{{ site.github_username }}">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</section>    
