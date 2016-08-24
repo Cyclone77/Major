@@ -5,6 +5,7 @@ subtitle:   "带来前所未有的书写体验"
 date:       2016-08-23
 author:     "Cyclone77"
 header-img: "img/post-bg-unix-linux.jpg"
+permalink:  "/1472014309297"
 tags:
     - Markdown
 ---

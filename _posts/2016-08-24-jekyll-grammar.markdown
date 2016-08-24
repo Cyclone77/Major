@@ -5,6 +5,7 @@ subtitle:   jekyll是静态网站/博客生成工具，在这里记录一下jeky
 date:       2016-08-24
 author:     "Cyclone77"
 header-img: "img/post-bg-js-version.jpg"
+permalink:  "/1472014322140"
 tags:
     - Jekyll
 ---
