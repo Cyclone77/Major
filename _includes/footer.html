@@ -6,7 +6,7 @@
                 <p class="copyright text-muted">
                     Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}
                     <br>
-                    Theme by <a href="http://20px.cn">Cyclone77</a>
+                    Theme by <a href="https://github.com/Cyclone77/Major">Cyclone77</a>
                 </p>
             </div>
         </div>
@@ -38,17 +38,18 @@
             $('html, body').animate({ scrollTop: 0 }, 1000);
             return false;
         });
-
-        var oTop = $("#tag_cloud").offset().top;
-        var sTop = 0;
-        $(window).scroll(function() {
-            sTop = $(this).scrollTop();
-            if (sTop >= oTop) {
-              $("#tag_cloud").addClass('lighted');
-            } else {
-              $("#tag_cloud").removeClass('lighted');
-            }
-        });
+        if ($("#tag_cloud").length > 0) {
+            var oTop = $("#tag_cloud").offset().top;
+            var sTop = 0;
+            $(window).scroll(function() {
+                sTop = $(this).scrollTop();
+                if (sTop >= oTop) {
+                  $("#tag_cloud").addClass('lighted');
+                } else {
+                  $("#tag_cloud").removeClass('lighted');
+                }
+            });
+        }
     })      
 </script>
 <!-- 
